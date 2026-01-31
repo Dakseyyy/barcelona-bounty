@@ -6,10 +6,10 @@ interface LoadingCheckProps {
 }
 
 const loadingSteps = [
-  "Connecting to warehouse...",
-  "Verifying available stock...",
-  "Checking your eligibility...",
-  "Reserving your unit...",
+  "Conectando con el almacén...",
+  "Verificando stock disponible...",
+  "Comprobando tu elegibilidad...",
+  "Reservando tu unidad...",
 ];
 
 export const LoadingCheck = ({ onComplete }: LoadingCheckProps) => {
@@ -53,7 +53,7 @@ export const LoadingCheck = ({ onComplete }: LoadingCheckProps) => {
       exit={{ opacity: 0 }}
       className="flex flex-col items-center text-center px-4"
     >
-      {/* Spinning loader */}
+      {/* Cargador giratorio */}
       <div className="relative mb-8">
         <motion.div
           className="w-24 h-24 rounded-full border-4 border-secondary"
@@ -66,7 +66,7 @@ export const LoadingCheck = ({ onComplete }: LoadingCheckProps) => {
         </div>
       </div>
 
-      {/* Current step text */}
+      {/* Texto del paso actual */}
       <motion.p
         key={currentStep}
         initial={{ opacity: 0, y: 10 }}
@@ -76,7 +76,7 @@ export const LoadingCheck = ({ onComplete }: LoadingCheckProps) => {
         {loadingSteps[currentStep]}
       </motion.p>
 
-      {/* Progress bar */}
+      {/* Barra de progreso */}
       <div className="w-full max-w-xs h-2 bg-secondary rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-button-gradient"
@@ -86,7 +86,7 @@ export const LoadingCheck = ({ onComplete }: LoadingCheckProps) => {
         />
       </div>
 
-      {/* Step indicators */}
+      {/* Indicadores de pasos */}
       <div className="flex gap-2 mt-6">
         {loadingSteps.map((_, index) => (
           <motion.div

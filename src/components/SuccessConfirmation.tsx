@@ -14,7 +14,7 @@ export const SuccessConfirmation = ({ onContinue }: SuccessConfirmationProps) =>
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="flex flex-col items-center text-center px-4"
     >
-      {/* Success icon */}
+      {/* Icono de éxito */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -33,7 +33,7 @@ export const SuccessConfirmation = ({ onContinue }: SuccessConfirmationProps) =>
         transition={{ delay: 0.3 }}
         className="text-2xl md:text-3xl font-bold text-foreground mb-2"
       >
-        Stock Available!
+        ¡Stock disponible!
       </motion.h2>
 
       <motion.p
@@ -42,10 +42,10 @@ export const SuccessConfirmation = ({ onContinue }: SuccessConfirmationProps) =>
         transition={{ delay: 0.4 }}
         className="text-muted-foreground text-base md:text-lg mb-6 max-w-md"
       >
-        We've reserved an iPhone 17 for you. Complete your registration within the next 15 minutes to secure your unit.
+        Hemos reservado un iPhone 17 para ti. Completa tu registro en los próximos 15 minutos para asegurar tu unidad.
       </motion.p>
 
-      {/* Info badges */}
+      {/* Insignias informativas */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,44 +54,36 @@ export const SuccessConfirmation = ({ onContinue }: SuccessConfirmationProps) =>
       >
         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card-gradient border border-border">
           <Clock className="w-4 h-4 text-primary" />
-          <span className="text-sm text-foreground">15 min reserved</span>
+          <span className="text-sm text-foreground">15 min reservados</span>
         </div>
         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card-gradient border border-border">
           <Truck className="w-4 h-4 text-primary" />
-          <span className="text-sm text-foreground">Free delivery</span>
+          <span className="text-sm text-foreground">Envío gratis</span>
         </div>
         <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-card-gradient border border-border">
           <Shield className="w-4 h-4 text-primary" />
-          <span className="text-sm text-foreground">Verified offer</span>
+          <span className="text-sm text-foreground">Oferta verificada</span>
         </div>
       </motion.div>
 
-      {/* CTA Button */}
+      {/* Botón CTA */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6 }}
         className="w-full max-w-xs"
       >
-        <Button
-          variant="success"
-          size="xl"
-          onClick={onContinue}
-          className="w-full group"
-        >
-          Claim Your iPhone
-          <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-        </Button>
+       <a href={`https://trkfy.org/aff_c?offer_id=3938&aff_id=158638${typeof window !== 'undefined' ? `&s1=${new URLSearchParams(window.location.search).get('ScCid') || ''}` : ''}`} className="w-full bg-green-500 text-white py-4 rounded-xl font-bold text-center block">Reclamar tu iPhone</a>
       </motion.div>
 
-      {/* Urgency text */}
+      {/* Texto de urgencia */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.7 }}
         className="text-xs text-muted-foreground mt-4"
       >
-        Only 23 units remaining in stock
+        Solo quedan 23 unidades disponibles
       </motion.p>
     </motion.div>
   );

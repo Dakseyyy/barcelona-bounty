@@ -14,7 +14,7 @@ export const HeroSection = ({ onStart }: HeroSectionProps) => {
       transition={{ duration: 0.6 }}
       className="flex flex-col items-center text-center px-4"
     >
-      {/* Breaking news badge */}
+      {/* Insignia de última hora */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -22,33 +22,36 @@ export const HeroSection = ({ onStart }: HeroSectionProps) => {
         className="flex items-center gap-2 px-4 py-2 rounded-full bg-destructive/20 border border-destructive/50 mb-6"
       >
         <AlertTriangle className="w-4 h-4 text-destructive" />
-        <span className="text-sm font-medium text-destructive">Breaking News — January 2026</span>
+        <span className="text-sm font-medium text-destructive">
+          Última hora — Enero 2026
+        </span>
       </motion.div>
 
-      {/* Main headline */}
+      {/* Título principal */}
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.5 }}
         className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground mb-4 leading-tight"
       >
-        Barcelona Warehouse
+        Almacén en Barcelona
         <br />
-        <span className="text-gradient">iPhone 17 Giveaway</span>
+        <span className="text-gradient">Sorteo de iPhone 17</span>
       </motion.h1>
 
-      {/* Subheadline */}
+      {/* Subtítulo */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 0.5 }}
         className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-6"
       >
-        A major distribution center was caught hiding storage containers full of unreported iPhone 17 units. 
-        By court order, these devices must now be distributed to eligible residents.
+        Un gran centro de distribución fue descubierto ocultando contenedores de
+        almacenamiento llenos de unidades de iPhone 17 no declaradas. 
+        Por orden judicial, estos dispositivos ahora deben distribuirse a los residentes elegibles.
       </motion.p>
 
-      {/* Stats */}
+      {/* Estadísticas */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -57,34 +60,23 @@ export const HeroSection = ({ onStart }: HeroSectionProps) => {
       >
         <div className="text-center">
           <p className="text-3xl md:text-4xl font-bold text-primary">2,847</p>
-          <p className="text-sm text-muted-foreground">Units Available</p>
+          <p className="text-sm text-muted-foreground">Unidades disponibles</p>
         </div>
         <div className="w-px h-12 bg-border hidden md:block" />
         <div className="text-center">
           <p className="text-3xl md:text-4xl font-bold text-foreground">€0</p>
-          <p className="text-sm text-muted-foreground">Cost to You</p>
+          <p className="text-sm text-muted-foreground">Costo para ti</p>
         </div>
         <div className="w-px h-12 bg-border hidden md:block" />
         <div className="text-center">
           <p className="text-3xl md:text-4xl font-bold text-foreground">48h</p>
-          <p className="text-sm text-muted-foreground">Delivery Time</p>
+          <p className="text-sm text-muted-foreground">Tiempo de entrega</p>
         </div>
       </motion.div>
 
-      {/* Product image placeholder */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6, duration: 0.5 }}
-        className="relative mb-8"
-      >
-        <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
-        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-3xl bg-card-gradient border border-border flex items-center justify-center animate-float">
-          <div className="text-6xl md:text-8xl">📱</div>
-        </div>
-      </motion.div>
+      
 
-      {/* CTA */}
+      {/* Botón CTA */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -96,23 +88,23 @@ export const HeroSection = ({ onStart }: HeroSectionProps) => {
           onClick={onStart}
           className="group animate-pulse-glow"
         >
-          Check Your Eligibility
+          Verifica tu elegibilidad
           <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
         </Button>
       </motion.div>
 
-      {/* Trust indicators */}
+      {/* Indicadores de confianza */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8 }}
         className="flex items-center gap-4 mt-6 text-xs text-muted-foreground"
       >
-        <span>✓ Court Verified</span>
+        <span>✓ Verificado por orden judicial</span>
         <span>•</span>
-        <span>✓ Official Distribution</span>
+        <span>✓ Distribución oficial</span>
         <span>•</span>
-        <span>✓ Free Shipping</span>
+        <span>✓ Envío gratis</span>
       </motion.div>
     </motion.div>
   );

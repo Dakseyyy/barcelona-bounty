@@ -9,7 +9,12 @@ interface QuizStepProps {
   buttonText?: string;
 }
 
-export const QuizStep = ({ question, description, onConfirm, buttonText = "Yes, I confirm" }: QuizStepProps) => {
+export const QuizStep = ({
+  question,
+  description,
+  onConfirm,
+  buttonText = "Sí, confirmo"
+}: QuizStepProps) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
